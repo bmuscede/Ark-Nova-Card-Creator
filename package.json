@@ -2,10 +2,16 @@
   "name": "next-ark-nova-cards",
   "version": "0.2.0",
   "private": true,
+  "main": "electron/main.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "desktop:dev": "concurrently -k \"pnpm dev\" \"pnpm electron:dev\"",
+    "electron:dev": "wait-on http://localhost:3000 && electron .",
+    "desktop:build": "pnpm build && pnpm electron:build",
+    "electron:build": "electron-builder",
+    "desktop:pack": "pnpm build && electron-builder --dir",
     "lint": "biome check src",
     "lint:fix": "biome check --write src",
     "lint:strict": "biome check src",
@@ -17,7 +23,6 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install",
     "postinstall": "prisma generate",
     "deploy": "vercel deploy --prod"
   },
@@ -92,8 +97,10 @@
     "@types/seedrandom": "^3.0.8",
     "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.14",
+    "concurrently": "^9.0.1",
     "depcheck": "^1.4.6",
-    "husky": "^7.0.4",
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3",
     "i18next-scanner": "^4.2.0",
     "jest": "^27.5.1",
     "lint-staged": "^12.5.0",
@@ -102,11 +109,60 @@
     "postcss": "^8.4.23",
     "prisma": "5.1.1",
     "tailwindcss": "^3.3.2",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "wait-on": "^7.2.0"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": ["biome check --write --diagnostic-level=error"],
-    "**/*.{json,css,scss,md,webmanifest}": ["biome format --write"]
+    "**/*.{js,jsx,ts,tsx}": [
+      "biome check --write --diagnostic-level=error"
+    ],
+    "**/*.{json,css,scss,md,webmanifest}": [
+      "biome format --write"
+    ]
+  },
+  "build": {
+    "appId": "com.bmuscede.arknova",
+    "productName": "Ark Nova Card Creator",
+    "files": [
+      "electron/**/*",
+      "package.json",
+      "next.config.js",
+      "next-i18next.config.js",
+      "next-sitemap.config.js",
+      "components.json",
+      ".next/standalone/**/*",
+      ".next/static/**/*",
+      "public/**/*"
+    ],
+    "asarUnpack": [
+      ".next/standalone/**",
+      ".next/static/**",
+      "public/**"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "electron/resources"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
   },
   "packageManager": "pnpm@8.6.12"
 }

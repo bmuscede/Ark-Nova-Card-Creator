@@ -52,6 +52,16 @@ For now, I use the following technologies:
 npm run dev
 ```
 
+## Desktop app (Electron)
+
+The repository includes an Electron scaffold that wraps the production Next.js build. Use PNPM to run the scripts so the standalone server output is created before packaging.
+
+- Development: `pnpm desktop:dev` (starts `next dev` and launches Electron once the local server is ready).
+- Production build: `pnpm desktop:build` (runs `next build` and creates platform installers with `electron-builder`).
+- Repack without installers: `pnpm desktop:pack`.
+
+Building for macOS, Windows, or Linux requires the respective platform tooling and signing assets when applicable.
+
 ## Help to Translate
 
 If you want to provide an additional translation, you can go to the [locales](https://github.com/Ender-Wiggin2019/Next-Ark-Nova-Cards/tree/main/public/locales) folder and follow these steps:

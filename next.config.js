@@ -4,6 +4,8 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   i18n,
 
+  output: 'standalone',
+
   eslint: {
     dirs: ['src'],
     ignoreDuringBuilds: true,
@@ -20,14 +22,6 @@ const nextConfig = {
       },
     ],
   },
-  // swcMinify: true,
-
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
 
   // SVGR
   webpack(config) {
