@@ -6,7 +6,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/PopHover';
-import { useRatingTrigger } from '@/hooks/useRatingTrigger';
 import { IAnimalCard } from '@/types/IAnimalCard';
 import { BaseAnimalCard } from './BaseAnimalCard';
 
@@ -19,19 +18,11 @@ export const RatedAnimalCard: React.FC<RatedAnimalCardProps> = ({
   cardData,
   showLink,
 }) => {
-  const { animalCard, model, rating, ratingCount } = cardData;
-  const { triggerRatingFetch } = useRatingTrigger();
-
-  const handleOpenChange = (open: boolean) => {
-    if (open) {
-      // 当popover打开时，触发评分数据获取
-      triggerRatingFetch();
-    }
-  };
+  const { animalCard, model } = cardData;
 
   return (
     <>
-      <PopHover onOpenChange={handleOpenChange}>
+      <PopHover>
         <PopoverTrigger>
           <BaseAnimalCard animal={animalCard} />
         </PopoverTrigger>
@@ -40,8 +31,6 @@ export const RatedAnimalCard: React.FC<RatedAnimalCardProps> = ({
             id={animalCard.id}
             model={model}
             showLink={showLink}
-            rating={rating}
-            ratingCount={ratingCount}
           />
         </PopoverContent>
       </PopHover>

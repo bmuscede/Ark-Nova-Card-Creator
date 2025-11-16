@@ -7,7 +7,6 @@ import { AnimalModelCard } from '@/components/cards/animal_cards/models/AnimalMo
 import { BaseEndGameCard } from '@/components/cards/endgame_cards/BaseEndGameCard';
 import { EndGameHoverCard } from '@/components/cards/endgame_cards/EndGameHoverCard';
 import { BaseSponsorCard } from '@/components/cards/sponsor_cards/BaseSponsorCard';
-import { Comments } from '@/components/comments/Comments';
 // make sure to import your TextFilter
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
@@ -71,7 +70,9 @@ export default function Page(
           ) : null}
         </div>
 
-        <Comments cardId={router.query.id} />
+        <div className='self-center rounded-lg bg-white/60 px-4 py-3 text-sm text-zinc-700 shadow'>
+          Jot down any personal thoughts about this card in your own notes.
+        </div>
       </div>
     </Layout>
   );

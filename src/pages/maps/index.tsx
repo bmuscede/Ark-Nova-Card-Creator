@@ -7,7 +7,6 @@ import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useEffect, useState } from 'react';
 import TextButton from '@/components/buttons/TextButton';
-import { Comments } from '@/components/comments/Comments';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import {
@@ -148,7 +147,9 @@ export default function HomePage(
             </div>
           )}
         </div>
-        <Comments cardId={selectedMap.id} />
+        <div className='w-full rounded-lg bg-white/60 p-4 text-sm text-zinc-700 shadow'>
+          Feel free to keep your own notes about each map locally while you explore different setups.
+        </div>
       </div>
     </Layout>
   );

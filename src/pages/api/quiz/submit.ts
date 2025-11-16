@@ -1,4 +1,3 @@
-import { clerkClient, getAuth } from '@clerk/nextjs/server';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 
@@ -6,8 +5,6 @@ import { prisma } from '@/lib/prisma-client';
 
 // POST /api/quiz/submit/
 export default async function post(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = getAuth(req);
-  const user = userId ? await clerkClient.users.getUser(userId) : null;
   if (req.method !== 'POST') {
     return res.status(405).end('Method Not Allowed');
   }
@@ -28,7 +25,7 @@ export default async function post(req: NextApiRequest, res: NextApiResponse) {
   // 检查是否存在今天创建的记录
   const existingRecord = await prisma.userSetUp.findFirst({
     where: {
-      userid: user?.id || name || 'Anonymous',
+      userid: name || 'Anonymous',
       seed: seed,
       // createdat: {
       //   gte: todayStart,
@@ -38,7 +35,7 @@ export default async function post(req: NextApiRequest, res: NextApiResponse) {
   });
 
   // biome-ignore lint/suspicious/noConsole: <>
-  console.log('existingRecord', existingRecord?.userinfo, user, userId);
+  console.log('existingRecord', existingRecord?.userinfo);
 
   // 如果存在，则不创建新记录，直接返回存在的记录
   if (
@@ -48,7 +45,7 @@ export default async function post(req: NextApiRequest, res: NextApiResponse) {
   ) {
     const result3 = await prisma.userSetUp.updateMany({
       where: {
-        userid: user?.id || name || 'Anonymous',
+        userid: name || 'Anonymous',
         seed: seed,
       },
       data: {
@@ -73,11 +70,11 @@ export default async function post(req: NextApiRequest, res: NextApiResponse) {
       title: '',
       content: req.body.content || '',
       likes: 0,
-      userid: user?.id || name,
+      userid: name,
       // user: { connect: { id: user.id, name: authorName } },
       userinfo: {
-        username: user?.username || name || 'Anonymous',
-        imageUrl: user?.imageUrl || '',
+        username: name || 'Anonymous',
+        imageUrl: '',
       },
     },
   });

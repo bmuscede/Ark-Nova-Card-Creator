@@ -41,6 +41,4 @@ type EndGameScoreArray =
 export interface IEndGameCard {
   id: string;
   endGameCard: EndGameCard;
-  rating?: number | null;
-  ratingCount?: number | null;
 }

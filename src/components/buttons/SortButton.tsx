@@ -5,7 +5,6 @@ import {
   TbSortAscendingNumbers,
   TbSortDescending2,
   TbSortDescendingNumbers,
-  TbStarHalfFilled,
 } from 'react-icons/tb';
 
 import TextButton from '@/components/buttons/TextButton';
@@ -33,10 +32,6 @@ export const SortButton: React.FC<SortButtonProps> = ({
         return t('sort.DIFF_ASC');
       case SortOrder.DIFF_DESC:
         return t('sort.DIFF_DESC');
-      // case SortOrder.RATING_ASC:
-      //   return t('Rating');
-      case SortOrder.RATING_DESC:
-        return t('sort.RATING_DESC');
       default:
         return '';
     }
@@ -52,8 +47,6 @@ export const SortButton: React.FC<SortButtonProps> = ({
         return <TbSortDescendingNumbers />;
       case SortOrder.DIFF_DESC:
         return <TbSortDescending2 />;
-      case SortOrder.RATING_DESC:
-        return <TbStarHalfFilled />;
       default:
         return null;
     }

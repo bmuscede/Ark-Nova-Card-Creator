@@ -1,28 +1,22 @@
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import React from 'react';
+
+import { cn } from '@/lib/utils';
+
+import { EndGameCard } from '@/types/EndGameCard';
 import { Separator } from '@/components/ui/separator';
 
 interface HoverCardProps {
   id: string;
   card: EndGameCard;
   showLink: boolean;
-  rating?: number | null;
-  ratingCount?: number | null;
 }
-
-import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
-import React from 'react';
-import { Rating } from 'react-simple-star-rating';
-
-import { cn } from '@/lib/utils';
-
-import { EndGameCard } from '@/types/EndGameCard';
 
 export const EndGameHoverCard: React.FC<HoverCardProps> = ({
   id,
   card,
-  showLink,
-  rating,
-  ratingCount,
+  showLink
 }) => {
   const { t } = useTranslation('common');
 
@@ -69,13 +63,13 @@ export const EndGameHoverCard: React.FC<HoverCardProps> = ({
                           'text-lime-600':
                             card.originalArray &&
                             obj.requirement <
-                              card.originalArray[idx].requirement,
+                            card.originalArray[idx].requirement,
                         },
                         {
                           'text-red-700':
                             card.originalArray &&
                             obj.requirement >
-                              card.originalArray[idx].requirement,
+                            card.originalArray[idx].requirement,
                         },
                       )}
                     >
@@ -103,20 +97,6 @@ export const EndGameHoverCard: React.FC<HoverCardProps> = ({
           {/*  {model.diffWithSpecialEnclosure}*/}
           {/*    /!*<MoneyIcon value={model.diff} />*!/*/}
           {/*</span>*/}
-        </div>
-      )}
-      {rating && (
-        <div className='flex flex-row gap-1'>
-          <Rating
-            emptyStyle={{ display: 'flex' }}
-            fillStyle={{ display: '-webkit-inline-box' }}
-            className='-mt-1'
-            readonly={true}
-            initialValue={rating}
-            allowFraction={true}
-            size={16}
-          />
-          {rating ? `${rating.toFixed(1)} (${ratingCount} ${t('users')})` : ''}
         </div>
       )}
       {showLink && (

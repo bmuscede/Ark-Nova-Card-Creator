@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Rating } from 'react-simple-star-rating';
 import AppealIcon from '@/components/icons/tokens/AppealIcon';
 import ConservationIcon from '@/components/icons/tokens/ConservationIcon';
 import MoneyIcon from '@/components/icons/tokens/MoneyIcon';
@@ -15,8 +14,6 @@ interface ModelCardProps {
   id: string;
   model: AnimalCardModel;
   showLink: boolean;
-  rating?: number | null;
-  ratingCount?: number | null;
   readonly?: boolean;
 }
 
@@ -24,8 +21,6 @@ export const AnimalModelCard: React.FC<ModelCardProps> = ({
   id,
   model,
   showLink,
-  rating,
-  ratingCount,
   readonly,
 }) => {
   // const router = useRouter();
@@ -59,20 +54,6 @@ export const AnimalModelCard: React.FC<ModelCardProps> = ({
             {model.diffWithSpecialEnclosure}
             {/*<MoneyIcon value={model.diff} />*/}
           </span>
-        </div>
-      )}
-      {rating && (
-        <div className='flex flex-row gap-1'>
-          <Rating
-            emptyStyle={{ display: 'flex' }}
-            fillStyle={{ display: '-webkit-inline-box' }}
-            className='-mt-1'
-            readonly={readonly ?? true}
-            initialValue={rating}
-            allowFraction={true}
-            size={16}
-          />
-          {rating ? `${rating.toFixed(1)} (${ratingCount} ${t('users')})` : ''}
         </div>
       )}
       <Separator className='my-2 bg-zinc-300' />

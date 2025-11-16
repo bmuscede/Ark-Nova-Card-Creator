@@ -1,13 +1,11 @@
-import { useUser } from '@clerk/nextjs';
 import { useQuery } from '@tanstack/react-query';
 import { Check, Share2 } from 'lucide-react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import React, { useState } from 'react';
 
-import { Comments } from '@/components/quiz/comments/Comments';
 import { PlayerArea } from '@/components/quiz/PlayerArea';
-import { ICardPickMemo, ICommentMemo } from '@/components/quiz/types';
+import { ICardPickMemo } from '@/components/quiz/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -22,7 +20,7 @@ import CardWrapper from '@/components/wrapper/CardWrapper';
 
 import { getQuizResult } from '@/services/quiz';
 import { TProjectSlotPosition } from '@/types/ProjectCard';
-import { GameConfig, IQuizComment } from '@/types/quiz';
+import { GameConfig } from '@/types/quiz';
 import { GameSetupGenerator } from '@/utils/setup';
 
 export type Props = {
@@ -35,7 +33,6 @@ export const QuizResult: React.FC<Props> = ({
   gameConfig,
   isDailyQuiz,
 }) => {
-  const { user } = useUser();
   const router = useRouter();
   const { t } = useTranslation('common');
   const [isCopied, setIsCopied] = useState(false);
@@ -66,34 +63,10 @@ export const QuizResult: React.FC<Props> = ({
           cardPick.set(card, (cardPick.get(card) || 0) + 1);
         else cardPick.set(card, 1);
       });
-
-      if (user && user.id === res.userid) {
-        userPick.push(...res.data.cards);
-      }
     });
 
     return { cardPick, total, userPick };
-  }, [user, resultFromAPI]);
-
-  const comments: ICommentMemo = React.useMemo(() => {
-    const cardPickComments: Map<string, IQuizComment[]> = new Map();
-    let userComment: IQuizComment | undefined;
-    let total = 0;
-
-    resultFromAPI.forEach((res) => {
-      total++;
-      const cardKey = JSON.stringify(res.data?.cards.sort());
-      const commentsArray = cardPickComments.get(cardKey) || [];
-
-      cardPickComments.set(cardKey, [...commentsArray, res]);
-
-      if (user && user.id === res.userid) {
-        userComment = res;
-      }
-    });
-
-    return { cardPickComments, total, userComment };
-  }, [user, resultFromAPI]);
+  }, [resultFromAPI]);
 
   const handleShare = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -183,14 +156,9 @@ export const QuizResult: React.FC<Props> = ({
             orientation='horizontal'
             className='text-md my-2 self-center'
           />
-          <Comments
-            seed={router.query.seed as string}
-            initialComments={comments}
-          />
-          <Separator
-            orientation='horizontal'
-            className='text-md my-2 self-center'
-          />
+          <div className='w-full rounded-lg bg-white/60 p-3 text-sm text-zinc-700'>
+            Keep any reflections about this quiz attempt in your own notes.
+          </div>
           {/* <div className='flex flex-col items-start justify-center gap-1'>
             <div className='text-lg font-bold'>Want to play more?</div>
             <div className=''>You can wait for next day challenge, or</div>

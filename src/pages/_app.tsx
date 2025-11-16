@@ -1,4 +1,3 @@
-import { ClerkProvider } from '@clerk/nextjs';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
 import { appWithTranslation } from 'next-i18next';
@@ -6,7 +5,6 @@ import { appWithTranslation } from 'next-i18next';
 import '@/styles/globals.css';
 import '@/styles/arknova.css';
 import '@/styles/odometer.css';
-import '@/styles/clerk.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         src='https://umami.ender-wiggin.com/script.js'
         data-website-id='f2a10fa7-5a6f-4329-9bdf-c239f51b6c52'
 
-        // data-website-id='f2a10fa7-5a6f-4329-9bdf-c239f51b6c52'
+      // data-website-id='f2a10fa7-5a6f-4329-9bdf-c239f51b6c52'
       ></Script>
       <Script
         strategy='afterInteractive'
@@ -36,9 +34,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         `,
         }}
       />
-      <ClerkProvider {...pageProps}>
-        <Component {...pageProps} />
-      </ClerkProvider>
+
+      <Component {...pageProps} />
     </>
   );
 }

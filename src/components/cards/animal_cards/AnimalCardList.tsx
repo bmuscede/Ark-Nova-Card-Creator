@@ -1,15 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'next-i18next';
 import React, { useEffect, useMemo } from 'react';
 
 import { RatedAnimalCard } from '@/components/cards/animal_cards/RatedAnimalCard';
 import CardList from '@/components/cards/shared/CardList';
 
-import { fetchCardRatings } from '@/services/card';
 import { AnimalCard } from '@/types/AnimalCard';
 import { CardSource } from '@/types/CardSource';
 import { IAnimalCard } from '@/types/IAnimalCard';
-import { IRating } from '@/types/IRating';
 import { SortOrder } from '@/types/Order';
 import {
   isAnimalTag,
@@ -86,11 +83,6 @@ export const AnimalCardList: React.FC<AnimalCardListProps> = ({
   maxNum,
 }) => {
   const { t } = useTranslation('common');
-  // 监听评分数据，但不主动获取（由点击触发）
-  const { data: cardRatings } = useQuery(['cardRatings'], fetchCardRatings, {
-    enabled: false, // 不主动获取
-    staleTime: 5 * 60 * 1000, // 5分钟缓存
-  });
 
   const animalsData = useAnimalData();
   const filteredAnimals = filterAnimals(
@@ -103,75 +95,42 @@ export const AnimalCardList: React.FC<AnimalCardListProps> = ({
     t,
   );
 
-  const combineDataWithRatings = (
-    animals: AnimalCard[],
-    ratings: IRating[],
-  ): IAnimalCard[] => {
-    return animals.map((animal) => {
-      const rating = ratings.find((r) => r.cardid === animal.id);
-      return {
-        id: animal.id,
-        animalCard: animal,
-        model: getAnimalCardModel(animal),
-        rating: rating ? rating._avg.rating : null,
-        ratingCount: rating ? rating._count : null,
-      };
-    });
-  };
-
-  const initialAnimalCards: IAnimalCard[] = useMemo(() => {
-    return filteredAnimals.map((animal) => ({
+  const { ratedAnimalCards, originalCount } = useMemo(() => {
+    const mappedAnimals: IAnimalCard[] = filteredAnimals.map((animal) => ({
       id: animal.id,
       animalCard: animal,
       model: getAnimalCardModel(animal),
-      rating: null,
-      ratingCount: null,
     }));
-  }, [filteredAnimals]);
-
-  const { ratedAnimalCards, originalCount } = useMemo(() => {
-    const _ratedAnimalCards = !cardRatings
-      ? initialAnimalCards
-      : combineDataWithRatings(filteredAnimals, cardRatings);
 
     switch (sortOrder) {
       case SortOrder.ID_ASC:
-        _ratedAnimalCards.sort((a, b) => a.id.localeCompare(b.id));
+        mappedAnimals.sort((a, b) => a.id.localeCompare(b.id));
         break;
       case SortOrder.ID_DESC:
-        _ratedAnimalCards.sort((a, b) => b.id.localeCompare(a.id));
+        mappedAnimals.sort((a, b) => b.id.localeCompare(a.id));
         break;
       case SortOrder.DIFF_ASC:
-        _ratedAnimalCards.sort(
+        mappedAnimals.sort(
           (a, b) =>
             a.model.diffWithSpecialEnclosure - b.model.diffWithSpecialEnclosure,
         );
         break;
       case SortOrder.DIFF_DESC:
-        _ratedAnimalCards.sort(
+        mappedAnimals.sort(
           (a, b) =>
             b.model.diffWithSpecialEnclosure - a.model.diffWithSpecialEnclosure,
         );
         break;
-      case SortOrder.RATING_DESC:
-        _ratedAnimalCards.sort((a, b) => {
-          if ((b.rating ?? -1) !== (a.rating ?? -1)) {
-            return (b.rating ?? -1) - (a.rating ?? -1);
-          } else {
-            return (b.ratingCount ?? -1) - (a.ratingCount ?? -1);
-          }
-        });
-        break;
     }
 
+    const slicedAnimals =
+      maxNum !== undefined ? mappedAnimals.slice(0, maxNum) : mappedAnimals;
+
     return {
-      ratedAnimalCards:
-        maxNum !== undefined
-          ? _ratedAnimalCards.slice(0, maxNum)
-          : _ratedAnimalCards,
-      originalCount: _ratedAnimalCards.length,
+      ratedAnimalCards: slicedAnimals,
+      originalCount: mappedAnimals.length,
     };
-  }, [cardRatings, initialAnimalCards, filteredAnimals, sortOrder, maxNum]);
+  }, [filteredAnimals, sortOrder, maxNum]);
 
   useEffect(() => {
     onCardCountChange(originalCount);

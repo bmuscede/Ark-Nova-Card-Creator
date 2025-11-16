@@ -1,6 +1,4 @@
-import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import { debounce } from 'lodash';
-import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import React, { useEffect, useState } from 'react';
@@ -20,7 +18,6 @@ import { submitQuiz } from '@/services/quiz';
 
 import { IPlayerData } from '@/types/quiz';
 
-import { UserArrowLeftIcon } from '~/index';
 export type Props = {
   seed: string;
   playerData: IPlayerData;
@@ -41,7 +38,6 @@ export const PlayerArea: React.FC<Props> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [userName, setUserName] = useState('');
   const [comment, setComment] = useState('');
-  const pathname = usePathname();
   const router = useRouter();
 
   const handleHandSelect = (id: string, add: boolean) => {
@@ -146,46 +142,29 @@ export const PlayerArea: React.FC<Props> = ({
           </div>
           {handList.length === 4 && canSubmit && (
             <>
-              <SignedOut>
-                <SignInButton mode='modal' forceRedirectUrl={pathname}>
-                  <Button type='button'>
-                    <UserArrowLeftIcon className='mr-1 h-5 w-5' />
-                    {t('comment.login_to_pick')}
-                  </Button>
-                </SignInButton>
-                <Input
-                  className='mt-2 max-w-2xl'
-                  placeholder={t('Enter your name to submit')}
-                  onChange={(e) => {
-                    setUserName(e.target.value);
-                  }}
-                />
-                <Button
-                  disabled={!userName}
-                  className='text-bold mt-2 w-24 bg-lime-500 text-lg text-white hover:bg-lime-600'
-                  onClick={handleSubmitDebounced}
-                >
-                  {t('Submit')}
-                </Button>
-              </SignedOut>
+              <Input
+                className='mt-2 max-w-2xl'
+                placeholder={t('Enter your name to submit')}
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
+              />
+              <Textarea
+                className='w-full rounded-lg bg-white/80 px-4 py-2'
+                placeholder='Comment'
+                rows={4}
+                name='content'
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+              ></Textarea>
 
-              <SignedIn>
-                <Textarea
-                  className='w-full rounded-lg bg-white/80 px-4 py-2'
-                  placeholder='Comment'
-                  rows={4}
-                  name='content'
-                  value={comment}
-                  onChange={(e) => setComment(e.target.value)}
-                ></Textarea>
-
-                <Button
-                  className='text-bold mt-2 w-24 bg-lime-500 text-lg text-white hover:bg-lime-600'
-                  onClick={handleSubmitDebounced}
-                >
-                  {t(isSubmitting ? 'Submitting' : 'Submit')}
-                </Button>
-              </SignedIn>
+              <Button
+                disabled={!userName || isSubmitting}
+                className='text-bold mt-2 w-24 bg-lime-500 text-lg text-white hover:bg-lime-600 disabled:opacity-60'
+                onClick={handleSubmitDebounced}
+              >
+                {t(isSubmitting ? 'Submitting' : 'Submit')}
+              </Button>
             </>
           )}
         </>

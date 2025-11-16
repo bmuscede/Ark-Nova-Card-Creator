@@ -1,53 +1,26 @@
-/*
- * @Author: Ender-Wiggin
- * @Date: 2024-06-27 23:56:37
- * @LastEditors: Ender-Wiggin
- * @LastEditTime: 2025-02-21 01:35:23
- * @Description:
- */
 import { Separator } from '@/components/ui/separator';
 
 interface HoverCardProps {
   id: string;
   showLink: boolean;
-  rating?: number | null;
-  ratingCount?: number | null;
   isPeopleSponsor?: boolean;
 }
 
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Rating } from 'react-simple-star-rating';
 
 export const SponsorHoverCard: React.FC<HoverCardProps> = ({
   id,
   showLink,
-  rating,
-  ratingCount,
   isPeopleSponsor,
 }) => {
-  // const router = useRouter();
   const { t } = useTranslation('common');
   return (
     <div className='flex flex-col gap-2 text-xs'>
       {isPeopleSponsor && (
         <div className='text-md font-bold text-lime-800'>
           {t("Hi, I'm a People Sponsor!")}
-        </div>
-      )}
-      {rating && (
-        <div className='flex flex-row gap-1'>
-          <Rating
-            emptyStyle={{ display: 'flex' }}
-            fillStyle={{ display: '-webkit-inline-box' }}
-            className='-mt-1'
-            readonly={true}
-            initialValue={rating}
-            allowFraction={true}
-            size={16}
-          />
-          {rating ? `${rating.toFixed(1)} (${ratingCount} ${t('users')})` : ''}
         </div>
       )}
       {showLink && (
