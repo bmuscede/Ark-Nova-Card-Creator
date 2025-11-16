@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 import CardList from '@/components/cards/shared/CardList';
 import { CardSource } from '@/types/CardSource';
@@ -39,15 +39,14 @@ export const ProjectCardList: React.FC<ProjectCardListProps> = ({
 }) => {
   const projectsData = useProjectData();
 
-  const filteredConservations = filterCards(
-    projectsData,
-    selectedCardSources,
-    textFilter,
+  const filteredConservations = useMemo(
+    () => filterCards(projectsData, selectedCardSources, textFilter),
+    [projectsData, selectedCardSources, textFilter],
   );
 
   useEffect(() => {
     onCardCountChange(filteredConservations.length);
-  }, [projectsData, onCardCountChange, filteredConservations.length]);
+  }, [filteredConservations.length, onCardCountChange]);
 
   return (
     <CardList>

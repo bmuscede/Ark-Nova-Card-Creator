@@ -540,7 +540,7 @@
   },
   "about": {
     "title": "Sobre Este Site",
-    "intro": "Este é um site não oficial e open-source do jogo de tabuleiro Ark Nova. Não é afiliado à Capstone Games de nenhuma forma.\nEste projeto se inspira no site do ssimeonoff e foi feito para que jogadores encontrem facilmente cartas e seus efeitos. Os dados iniciais deste site vêm de <1>Lista de cartas de animais da Cillie</1>, enquanto os ícones e estilos foram emprestados do <3>BGA</3>. Se houver preocupações de direitos autorais, eu as tratarei.",
+    "intro": "Este é um site não oficial e open-source do jogo de tabuleiro Ark Nova, sem vínculo com a Capstone Games. Dados de cartas, mapas e ícones estão incluídos localmente para consulta offline. Se houver preocupações de direitos autorais, eu as tratarei.",
     "features": {
       "title": "Recursos",
       "intro": "Atualmente, este site possui os seguintes recursos:",
@@ -562,11 +562,11 @@
     "faq": {
       "title": "FAQ",
       "q_1": "Como posso ajudar com a tradução?",
-      "a_1": "Legal! Você pode seguir as instruções <1>aqui</1>.",
+      "a_1": "Legal! Siga as instruções de tradução incluídas no aplicativo.",
       "q_2": "Este site foi criado para fins comerciais?",
       "a_2": "Não, é um site open-source dedicado a este jogo fantástico. Imagens e textos originais pertencem à Capstone Games. Se houver preocupações de copyright, eu as tratarei.",
       "q_3": "E se eu tiver outra pergunta, sugestão ou bug relacionado a este site?",
-      "a_3": "Sinta-se à vontade para comentar no <1>tópico do BGG</1> ou abrir uma issue no <3>GitHub</3>."
+      "a_3": "Use as opções internas do app para enviar dúvidas ou feedback; no modo offline, tudo permanece guardado localmente."
     }
   },
   "diy": {
@@ -582,8 +582,8 @@
     "bug": "Esta função tem um bug não resolvido. Por favor, não exclua habilidades originais antes das suas habilidades personalizadas."
   },
   "maps": {
-    "alternative_desc": "Confira o <1>post</1> para mais informações. Você agora pode alternar entre os mapas original e alternativo.",
-    "alternative_title": "Agora o BGA tem mapas alternativos!",
+    "alternative_desc": "Os mapas original e alternativo estão incluídos no aplicativo, permitindo alternar sem conexão com a internet.",
+    "alternative_title": "Mapas alternativos disponíveis offline!",
     "name0": "Mapa 0",
     "name1": "Torre de Observação",
     "name2": "Áreas ao Ar Livre",

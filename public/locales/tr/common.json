@@ -515,7 +515,6 @@
   "ARCADE": "ARKAD",
   "Digging": "Kazma",
   "PROMOTION TEAM": "TANITIM EKİBİ",
-
   "sort": {
     "ID_ASC": "ID",
     "ID_DESC": "ID",
@@ -541,7 +540,7 @@
   },
   "about": {
     "title": "Site Hakkında",
-    "intro": "Bu, Ark Nova masa oyununun açık kaynaklı resmi olmayan bir web sitesidir. Capstone Games ile hiçbir bağlantısı yoktur.\nBu proje, ssimeonoff'un web sitesinden ilham alır ve oyuncuların kartları ve efektlerini kolayca aramasını sağlar. Bu site için başlangıç verileri <1>Cillie'nin hayvan kartları listesinden</1> alınmıştır, ikonlar ve stiller ise <3>BGA</3>'dan ödünç alınmıştır. Telif hakkı endişeleri varsa, bunları ele alacağım.",
+    "intro": "Bu, Ark Nova ile hiçbir bağlantısı olmayan açık kaynaklı, resmi olmayan bir Ark Nova sitesidir. Kart, harita ve simge verileri çevrimdışı kullanım için yerel olarak paketlenmiştir. Telif hakkı endişeleri varsa, bunları ele alacağım.",
     "features": {
       "title": "Özellikler",
       "intro": "Şu anda bu sitede şu özellikler bulunmaktadır:",
@@ -563,11 +562,11 @@
     "faq": {
       "title": "SSS",
       "q_1": "Çeviriye nasıl yardımcı olabilirim?",
-      "a_1": "Harika! Talimatları <1>buradan</1> takip edebilirsiniz.",
+      "a_1": "Harika! Uygulamaya dahil edilen çeviri talimatlarını takip edebilirsiniz.",
       "q_2": "Bu web sitesi ticari amaçlarla mı oluşturuldu?",
       "a_2": "Hayır, bu harika oyuna adanmış açık kaynaklı bir web sitesidir. Orijinal görüntüler ve metinler Capstone Games'e aittir. Telif hakkı endişeleri varsa, bunları ele alacağım.",
       "q_3": "Bu web sitesiyle ilgili başka bir sorum, önerim veya hata raporum varsa ne yapmalıyım?",
-      "a_3": "<1>BGG konusuna</1> yorum yapmaktan veya <3>GitHub</3>'da sorun göndermekten çekinmeyin."
+      "a_3": "Sorularınızı veya hata raporlarınızı uygulamadaki geri bildirim seçenekleriyle paylaşabilirsiniz; çevrimdışı sürüm verileri yerelde tutar."
     }
   },
   "diy": {
@@ -583,9 +582,8 @@
     "bug": "Bu işlevde çözülmemiş bir hata var. Lütfen özel yeteneklerinizden önce orijinal yetenekleri silmeyin."
   },
   "maps": {
-    "alternative_title": "Artık BGA'da alternatif haritalar var!",
-    "alternative_desc": "Daha fazla bilgi için <1>gönderiye</1> bakın. Artık orijinal ve alternatif haritalar arasında geçiş yapabilirsiniz.",
-
+    "alternative_title": "Alternatif haritalar yerel olarak hazır!",
+    "alternative_desc": "Orijinal ve alternatif haritalar paketlemede yer alır; çevrimdışı olarak aralarında geçiş yapabilirsiniz.",
     "name1": "Gözlem Kulesi",
     "name2": "Açık Alanlar",
     "name3": "Gümüş Göl",

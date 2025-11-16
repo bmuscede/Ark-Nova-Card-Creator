@@ -47,7 +47,6 @@
     "determination_description": "Führe im Anschluss eine weitere Aktion {ActionCard} aus.",
     "peacocking_description": "Du darfst, falls möglich, eine kostenlose Grossvogelvoliere {LargeBirdAviary} platzieren.",
     "petting_zoo_animal_description": "Erhalte für jedes Streicheltier-Symbol in deinem Zoo {Appeal-3} .",
-
     "mark_description": "Markiere im Anschluss 1 Tierkarte in der Auslage.",
     "trade_description": "Du darfst genau 1 {XToken} -Marker gegen {Money-5} tauschen oder umgekehrt.",
     "sea_animal_magnet_description": "Nimm alle Karten mit {SeaAnimalTag} -Symbol aus der Auslage auf die Hand.",
@@ -499,7 +498,6 @@
   "RECONSTRUCTION": "Umbaumassnahmen",
   "ARCADE": "Spielhalle",
   "Digging": "Wühlen",
-
   "sort": {
     "ID_ASC": "ID",
     "ID_DESC": "ID",
@@ -521,7 +519,7 @@
   },
   "about": {
     "title": "Über diese Seite",
-    "intro": "Dies ist eine inoffizielle Open-Source-Website zum Brettspiel Arche Nova. Es besteht in keiner Weise eine Verbindung zu Capstone Games.\n Dieses Projekt ist inspiriert durch ssimeonoff's Website und dient Spielern zur einfachen Suche von Karten und deren Effekten. Die initialen Daten für diese Seite stammen von <1>Cillie's Liste der Tierkarten</1>, die Icons und Stile sind von <3>BGA</3>. Falls es Bedenken wegen Copyright-Rechten gibt, werde ich mich darum kümmern.",
+    "intro": "Dies ist eine inoffizielle Open-Source-Website zum Brettspiel Arche Nova ohne Verbindung zu Capstone Games. Karten-, Symbol- und Zooplan-Daten sind lokal gebündelt, sodass du sie auch offline nutzen kannst. Falls es Bedenken wegen Copyright-Rechten gibt, werde ich mich darum kümmern.",
     "features": {
       "title": "Funktionen",
       "intro": "Aktuell bietet diese Seite folgende Funktionen:",
@@ -543,11 +541,11 @@
     "faq": {
       "title": "FAQ",
       "q_1": "Wie kann ich bei der Übersetzung helfen?",
-      "a_1": "Super! Du kannst einfach den Anweisungen <1>hier</1> folgen.",
+      "a_1": "Super! Folge einfach den Hinweisen, die in der App mitgeliefert werden.",
       "q_2": "Dient diese Seite gewerblichen Zwecken?",
       "a_2": "Nein, es handelt sich um eine Open-Source-Website für dieses fantastische Spiel. Die Originalbilder und -texte sind Eigentum von Capstone Games. Falls es Bedenken wegen Copyright-Rechten gibt, werde ich mich darum kümmern.",
       "q_3": "Was wenn ich eine andere Frage, Anregung oder einen Bug-Report in Zusammenhang mit dieser Website habe?",
-      "a_3": "Kommentiere einfach im <1>BGG Thread</1> oder reiche ein Thema/eine Frage bei <3>GitHub</3> ein."
+      "a_3": "Nutze die vorgesehenen Rückmeldemöglichkeiten in der App; die Offline-Version behält alle Daten lokal."
     }
   },
   "diy": {
@@ -563,6 +561,8 @@
     "bug": "Diese Funktion hat einen ungelösten Bug. Bitte lösche zunächst selbst erstellte Fähigkeiten und danach existierende Fähigkeiten."
   },
   "maps": {
+    "alternative_title": "Alternative Zoopläne lokal verfügbar!",
+    "alternative_desc": "Originale und alternative Pläne sind im Paket enthalten, sodass du offline zwischen ihnen wechseln kannst.",
     "name1": "Aussichtsplattform",
     "name2": "Freilaufflächen",
     "name3": "Silbersee",

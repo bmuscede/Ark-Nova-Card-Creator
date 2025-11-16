@@ -2,10 +2,9 @@ import { HelpCircle, Sparkles } from 'lucide-react';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Trans, useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import TextButton from '@/components/buttons/TextButton';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
@@ -17,47 +16,76 @@ import {
 } from '@/components/ui/accordion';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Switch } from '@/components/ui/switch';
+import { getFromLocalStorage } from '@/lib/helper';
 import { AlternativeMapBoards } from '@/data/AlternativeMapBoards';
+import { mapAssetManifest } from '@/data/MapAssetManifest';
 import { MapBoards } from '@/data/MapBoards';
-
 import { MapBoard } from '@/types/MapBoard';
 
+const MAP_SELECTION_KEY = 'ark-nova:selected-map-board';
+const MAP_VARIANT_KEY = 'ark-nova:selected-map-variant';
+
 type Props = {
-  // Add custom props here
-};
+  // Add custom props here if needed.
+}
 
 export default function HomePage(
   _props: InferGetStaticPropsType<typeof getStaticProps>,
 ) {
-  const router = useRouter();
   const { t } = useTranslation('common');
   const [alternativeMaps, setAlternativeMaps] = useState(false);
-  const maps = alternativeMaps ? AlternativeMapBoards : MapBoards;
-  const queryMapBoard = getMapFromQuery();
-  const [selectedMap, setSelectedMap] = useState<MapBoard>(queryMapBoard);
-  function handleSelectMap(map: MapBoard) {
-    setSelectedMap(map);
-    router.push('/maps/?map=' + map.id, undefined, { shallow: true });
-  }
-
-  const handlePeopleSponsorLink = () => {
-    router.push('/people-sponsors', undefined, { shallow: true });
-  };
+  const maps = useMemo(
+    () => (alternativeMaps ? AlternativeMapBoards : MapBoards),
+    [alternativeMaps],
+  );
+  const [selectedMap, setSelectedMap] = useState<MapBoard>(maps[0]);
 
   useEffect(() => {
-    const map = getMapFromQuery();
-    setSelectedMap(map || maps[0]);
-  }, [router?.query?.map, alternativeMaps]);
+    const storedVariant = getFromLocalStorage(MAP_VARIANT_KEY);
+    const useAlternative = storedVariant === 'alternative';
+    const storedSelection = getFromLocalStorage(MAP_SELECTION_KEY);
+    const availableMaps = useAlternative ? AlternativeMapBoards : MapBoards;
 
-  function getMapFromQuery(): MapBoard {
-    const id = router.query.map ? router.query.map : maps[0].id;
-    const map = maps.find((map) => map.id === id);
-    return map || maps[0];
+    setAlternativeMaps(useAlternative);
+    const persistedMap = availableMaps.find((map) => map.id === storedSelection);
+    setSelectedMap(persistedMap ?? availableMaps[0]);
+  }, []);
+
+  useEffect(() => {
+    const availableMaps = alternativeMaps ? AlternativeMapBoards : MapBoards;
+    const persistedSelection = availableMaps.find((map) => map.id === selectedMap.id);
+    const fallback = persistedSelection ?? availableMaps[0];
+
+    if (selectedMap.id !== fallback.id) {
+      setSelectedMap(fallback);
+      return;
+    }
+
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(
+        MAP_VARIANT_KEY,
+        alternativeMaps ? 'alternative' : 'standard',
+      );
+    }
+  }, [alternativeMaps, selectedMap.id]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(MAP_SELECTION_KEY, selectedMap.id);
+    }
+  }, [selectedMap.id]);
+
+  function handleSelectMap(map: MapBoard) {
+    setSelectedMap(map);
   }
 
   function handleMapChange() {
     setAlternativeMaps(!alternativeMaps);
   }
+
+  const mapImage =
+    mapAssetManifest[selectedMap.image] ?? mapAssetManifest[maps[0].image];
+
   return (
     <Layout>
       <Seo templateTitle='Ark Nova Maps & Alternatives' />
@@ -68,19 +96,7 @@ export default function HomePage(
           <AlertTitle>{t('maps.alternative_title')}</AlertTitle>
           <AlertDescription>
             <div className='flex justify-start gap-4'>
-              <div className='max-w-2xl'>
-                <Trans i18nKey='maps.alternative_desc'>
-                  Check the
-                  <Link
-                    className='font-medium text-primary underline underline-offset-4'
-                    href='https://github.com/Ender-Wiggin2019/Next-Ark-Nova-Cards/tree/main#help-to-translate'
-                  >
-                    post
-                  </Link>
-                  for more information. You can now switch between the original
-                  and alternative maps.
-                </Trans>
-              </div>
+              <div className='max-w-2xl'>{t('maps.alternative_desc')}</div>
               <Switch
                 checked={alternativeMaps}
                 onCheckedChange={handleMapChange}
@@ -107,7 +123,7 @@ export default function HomePage(
           <Image
             alt={selectedMap.name}
             priority={true}
-            src={`/img/maps/${selectedMap.image}.jpg`}
+            src={mapImage}
             className='w-full rounded-md object-contain shadow-lg'
             quality={85}
             width={1000}
@@ -138,13 +154,13 @@ export default function HomePage(
             </Accordion>
           )}
           {selectedMap.id === 'm14' && (
-            <div
+            <Link
+              href='/people-sponsors'
               className='flex items-center text-lime-800 no-underline hover:underline'
-              onClick={handlePeopleSponsorLink}
             >
               <HelpCircle className='mr-1 h-6 w-6' />
               <div>{t('which-people-sponsors')}</div>
-            </div>
+            </Link>
           )}
         </div>
         <div className='w-full rounded-lg bg-white/60 p-4 text-sm text-zinc-700 shadow'>

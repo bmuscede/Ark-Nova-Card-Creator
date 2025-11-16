@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo } from 'react';
+
 import { RatedEndGameCard } from '@/components/cards/endgame_cards/RatedEndGameCard';
 import CardList from '@/components/cards/shared/CardList';
 import { EndGameData } from '@/data/EndGames';
-
 import { CardSource } from '@/types/CardSource';
 import { EndGameCard, IEndGameCard } from '@/types/EndGameCard';
 import { SortOrder } from '@/types/Order';
@@ -37,10 +37,9 @@ export const EndGameCardList: React.FC<EndGameCardListProps> = ({
   onCardCountChange,
   sortOrder = SortOrder.ID_ASC,
 }) => {
-  const filteredEndGames = filterCards(
-    EndGameData,
-    selectedCardSources,
-    textFilter,
+  const filteredEndGames = useMemo(
+    () => filterCards(EndGameData, selectedCardSources, textFilter),
+    [selectedCardSources, textFilter],
   );
 
   const ratedEndGameCards: IEndGameCard[] = useMemo(() => {
@@ -52,20 +51,26 @@ export const EndGameCardList: React.FC<EndGameCardListProps> = ({
 
   useEffect(() => {
     onCardCountChange(filteredEndGames.length);
-  }, [filteredEndGames, onCardCountChange]);
+  }, [filteredEndGames.length, onCardCountChange]);
 
-  switch (sortOrder) {
-    case SortOrder.ID_ASC:
-      ratedEndGameCards.sort((a, b) => a.id.localeCompare(b.id));
-      break;
-    case SortOrder.ID_DESC:
-      ratedEndGameCards.sort((a, b) => b.id.localeCompare(a.id));
-      break;
-  }
+  const sortedEndGames = useMemo(() => {
+    const sortedCards = [...ratedEndGameCards];
+
+    switch (sortOrder) {
+      case SortOrder.ID_DESC:
+        sortedCards.sort((a, b) => b.id.localeCompare(a.id));
+        break;
+      case SortOrder.ID_ASC:
+      default:
+        sortedCards.sort((a, b) => a.id.localeCompare(b.id));
+    }
+
+    return sortedCards;
+  }, [ratedEndGameCards, sortOrder]);
 
   return (
     <CardList>
-      {ratedEndGameCards.map((ratedEndGameCard: IEndGameCard) => (
+      {sortedEndGames.map((ratedEndGameCard: IEndGameCard) => (
         <div
           key={ratedEndGameCard.id}
           className='-mb-8 -ml-6 scale-75 md:scale-100 lg:mb-2 lg:ml-8 xl:ml-0'

@@ -60,7 +60,6 @@
     "determination_description": "After finishing this action, you take 1 other action {ActionCard} .",
     "peacocking_description": "You may place a Large Bird Aviary {LargeBirdAviary} for free, if possible.",
     "petting_zoo_animal_description": "Gain {Appeal-3} for each Petting Zoo Animal icon in your zoo.",
-
     "mark_description": "After finishing this action, mark 1 Animal card in the display.",
     "trade_description": "You may trade exactly 1 {XToken} -Marker for {Money-5} or vice versa.",
     "sea_animal_magnet_description": "Add all cards with the {SeaAnimalTag} icon from the display to your hand.",
@@ -516,7 +515,6 @@
   "ARCADE": "ARCADE",
   "Digging": "Digging",
   "PROMOTION TEAM": "PROMOTION TEAM",
-
   "sort": {
     "ID_ASC": "ID",
     "ID_DESC": "ID",
@@ -542,7 +540,7 @@
   },
   "about": {
     "title": "About This Site",
-    "intro": "This is an open-source unofficial website of the board game Ark Nova. It is not affiliated with Capstone Games in any way.\nThis project gets inspiration from ssimeonoff's website and for players to easily search for cards and their effects. The initial data for this site is sourced from <1>Cillie's List of animal cards</1>, while the icons and styles were borrowed from <3>BGA</3>. If there are any copyright concerns, I will address them.",
+    "intro": "This is an open-source unofficial website of the board game Ark Nova. It is not affiliated with Capstone Games in any way. Card, map, and icon data are bundled locally for offline reference. If there are any copyright concerns, I will address them.",
     "features": {
       "title": "Features",
       "intro": "Currently, this site has the following features:",
@@ -564,11 +562,11 @@
     "faq": {
       "title": "FAQ",
       "q_1": "How can I assist with the translation?",
-      "a_1": "Nice! You can follow the instructions <1>here</1>.",
+      "a_1": "Nice! You can follow the translation instructions packaged with the app.",
       "q_2": "Is this website created for commercial purposes?",
       "a_2": "No, it's a open-source website dedicated to this fantastic game. Original images and texts belong to Capstone Games. f there are any copyright concerns, I will address them.",
       "q_3": "What if I have another question, suggestion, or bug report related to this website?",
-      "a_3": "Feel free to comment in the <1>BGG thread</1> or submit an issue at <3>GitHub</3>."
+      "a_3": "Feel free to share feedback through the in-app options; offline bundles keep everything local."
     }
   },
   "diy": {
@@ -584,10 +582,8 @@
     "bug": "This function has a unsolved bug. Please do not delete original abilities before your customized abilities."
   },
   "maps": {
-    "alternative_title": "Now BGA has alternative maps!",
-    "alternative_desc": "Check the <1>post</1> for more information. You can now switch between the original and alternative maps.",
-
-    "name1": "Observation Tower",
+    "alternative_title": "Alternative maps are packed for offline use!",
+    "alternative_desc": "Original and alternative map references are bundled locally, so you can switch layouts without going online.",
     "name2": "Outdoor Areas",
     "name3": "Silver Lake",
     "name4": "Commercial Harbor",

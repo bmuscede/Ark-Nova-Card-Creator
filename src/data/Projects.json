@@ -1,0 +1,1486 @@
+[
+  {
+    "id": "101",
+    "name": "SPECIES DIVERSITY",
+    "type": "Base",
+    "tag": "all-animals",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 3
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_101"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "102",
+    "name": "HABITAT DIVERSITY",
+    "type": "Base",
+    "tag": "all-continents",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "all-animals",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 3
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_102"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "103",
+    "name": "AFRICA",
+    "type": "Base",
+    "tag": "africa",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "africa",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "africa",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "africa",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_103"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "104",
+    "name": "AMERICAS",
+    "type": "Base",
+    "tag": "americas",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "americas",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "americas",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "americas",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_104"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "105",
+    "name": "AUSTRALIA",
+    "type": "Base",
+    "tag": "australia",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "australia",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "australia",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "australia",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_105"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "106",
+    "name": "ASIA",
+    "type": "Base",
+    "tag": "asia",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "asia",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "asia",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "asia",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_106"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "107",
+    "name": "EUROPE",
+    "type": "Base",
+    "tag": "europe",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "europe",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "europe",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "europe",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_107"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "108",
+    "name": "PRIMATES",
+    "type": "Base",
+    "tag": "primate",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "primate",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "primate",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "primate",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_108"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "109",
+    "name": "REPTILES",
+    "type": "Base",
+    "tag": "reptile",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "reptile",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "reptile",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "reptile",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_109"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "110",
+    "name": "PREDATORS",
+    "type": "Base",
+    "tag": "predator",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "predator",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "predator",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "predator",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_110"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "111",
+    "name": "HERBIVORES",
+    "type": "Base",
+    "tag": "herbivore",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "herbivore",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "herbivore",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "herbivore",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_111"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "112",
+    "name": "BIRDS",
+    "type": "Base",
+    "tag": "bird",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "bird",
+            "bonusValue": 5
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "bird",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "bird",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_112"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "113",
+    "name": "BAVARIAN FOREST NATIONAL PARK",
+    "type": "Release",
+    "tag": "europe",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_113"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "114",
+    "name": "YOSEMITE NATIONAL PARK",
+    "type": "Release",
+    "tag": "americas",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_114"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "115",
+    "name": "ANGTHONG NATIONAL PARK",
+    "type": "Release",
+    "tag": "asia",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_115"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "116",
+    "name": "SERENGETI NATIONAL PARK",
+    "type": "Release",
+    "tag": "africa",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_116"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "117",
+    "name": "BLUE MOUNTAINS NATIONAL PARK",
+    "type": "Release",
+    "tag": "australia",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_117"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "118",
+    "name": "SAVANNA",
+    "type": "Release",
+    "tag": "predator",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_118"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "119",
+    "name": "LOW MOUNTAIN RANGE",
+    "type": "Release",
+    "tag": "bird",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_119"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "120",
+    "name": "BAMBOO FOREST",
+    "type": "Release",
+    "tag": "herbivore",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_120"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "121",
+    "name": "SEA CAVE",
+    "type": "Release",
+    "tag": "reptile",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_121"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "122",
+    "name": "JUNGLE",
+    "type": "Release",
+    "tag": "primate",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 5
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 4
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "release",
+            "bonusValue": 3
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_122"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "123",
+    "name": "BIRD BREEDING PROGRAM",
+    "type": "Breed",
+    "tag": "bird",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 1
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_123"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "124",
+    "name": "PREDATOR BREEDING PROGRAM",
+    "type": "Breed",
+    "tag": "predator",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 1
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_124"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "125",
+    "name": "REPTILE BREEDING PROGRAM",
+    "type": "Breed",
+    "tag": "reptile",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 1
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_125"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "126",
+    "name": "HERBIVORE BREEDING PROGRAM",
+    "type": "Breed",
+    "tag": "herbivore",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 1
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_126"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "127",
+    "name": "PRIMATE BREEDING PROGRAM",
+    "type": "Breed",
+    "tag": "primate",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 1
+          },
+          {
+            "bonusType": "Reputation",
+            "bonusValue": 2
+          }
+        ]
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusValue": 2
+          }
+        ]
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_127"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "128",
+    "name": "AQUATIC",
+    "type": "Normal",
+    "tag": "water",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_128"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "129",
+    "name": "GEOLOGICAL",
+    "type": "Normal",
+    "tag": "rock",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "rock",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "rock",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "rock",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_129"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "130",
+    "name": "SMALL ANIMALS",
+    "type": "Normal",
+    "tag": "animal-size-2",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "animal-size-2",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 8
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "animal-size-2",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "animal-size-2",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_130"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "131",
+    "name": "LARGE ANIMALS",
+    "type": "Normal",
+    "tag": "animal-size-4",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 3
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "water",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_131"
+    },
+    "source": "Base"
+  },
+  {
+    "id": "132",
+    "name": "RESEARCH",
+    "type": "Normal",
+    "tag": "science",
+    "slots": [
+      {
+        "position": 1,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "science",
+            "bonusValue": 4
+          }
+        ],
+        "indicator": 5
+      },
+      {
+        "position": 2,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "science",
+            "bonusValue": 3
+          }
+        ],
+        "indicator": 4
+      },
+      {
+        "position": 3,
+        "bonuses": [
+          {
+            "bonusType": "Conservation Point",
+            "bonusRequirement": "science",
+            "bonusValue": 2
+          }
+        ],
+        "indicator": 2
+      }
+    ],
+    "placeBonuses": [],
+    "description": {
+      "effectType": "conservation",
+      "effectDesc": "project.desc_131"
+    },
+    "source": "Base"
+  }
+]
