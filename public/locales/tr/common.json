@@ -4,14 +4,6 @@
   "Association": "Dernek",
   "Animal": "Hayvan",
   "Build": "İnşa",
-  "quiz": {
-    "today": "Günlük Bilgi Yarışması",
-    "result": "İstatistikler",
-    "random": "Rastgele Bilgi Yarışması",
-    "prev": "Geçmiş Yarışmalar",
-    "total": "Toplam",
-    "banner_desc": "Bilgi yarışmaları ve Ark Nova hakkındaki konuları tartışmak için <1>Discord Grubumuza</1> katılın!"
-  },
   "abilities": {
     "clever_description": "Eylem tamamlandığında herhangi bir Eylem kartını {Slot-1} yerine yerleştirebilirsiniz.",
     "sun_bathing_description": "Elinizden her biri için {Money-4} karşılığında en fazla {} kart satabilirsiniz.",
@@ -530,13 +522,7 @@
     "about": "Hakkında",
     "diy": "Kart Yapımcısı",
     "maps": "Haritalar",
-    "endgames": "Final Puanlama",
-    "random_quiz": "Rastgele Bilgi Yarışması",
-    "daily_quiz": "Günlük Bilgi Yarışması"
-  },
-  "comment": {
-    "login_to_comment": "yorum yapmak için giriş yapın",
-    "login_to_pick": "daha iyi istatistik için giriş yapın"
+    "endgames": "Final Puanlama"
   },
   "about": {
     "title": "Site Hakkında",

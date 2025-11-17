@@ -5,7 +5,7 @@ const defaultMeta = {
   title: 'Ark Nova Fan Hub - Explore Maps, Cards, and More!',
   siteName: 'Ark Nova Fan Hub',
   description:
-    'Dive into the world of Ark Nova with our extensive card and map database and engaging quizzes. Rate cards, leave comments, and unleash your creativity with our DIY card maker!',
+    'Dive into the world of Ark Nova with our extensive card and map database. Explore strategies and unleash your creativity with our DIY card maker!',
   url: 'https://ark-nova.ender-wiggin.com',
   type: 'website',
   robots: 'follow, index',

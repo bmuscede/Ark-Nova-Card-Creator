@@ -23,13 +23,11 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "postinstall": "prisma generate",
     "deploy": "vercel deploy --prod"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@hookform/resolvers": "^3.2.0",
-    "@prisma/client": "^5.1.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-hover-card": "^1.0.6",
@@ -105,7 +103,6 @@
     "next-router-mock": "^0.7.5",
     "next-sitemap": "^2.5.28",
     "postcss": "^8.4.23",
-    "prisma": "5.1.1",
     "tailwindcss": "^3.3.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",

@@ -15,7 +15,6 @@ Expect frequent improvements.
 Next up:
 
 - [x] Animal Value Model
-- [x] User Login and write comments
 - [ ] Conservation Project cards
 - [x] EndGame Scoring cards.
 - [x] Maps
@@ -40,11 +39,6 @@ npm i
 ```bash
 mv .env.example .env.local
 ```
-
-For now, I use the following technologies:
-
-- [Clerk](https://www.clerk.dev/) for authentication. You can sign up for a free account [here](https://www.clerk.dev/). Once you have an account, you can create a new project and get your API keys. Then, you can add them to your `.env.local` file.
-- [PlanetScale](https://www.planetscale.com/) for database. It's not integrated yet, but will be implemented in the future.
 
 **3. Run App**
 

@@ -530,13 +530,7 @@
     "about": "About",
     "diy": "Card Maker",
     "maps": "Maps",
-    "endgames": "Final Scoring",
-    "random_quiz": "Random Quiz",
-    "daily_quiz": "Daily Quiz"
-  },
-  "comment": {
-    "login_to_comment": "login to comment",
-    "login_to_pick": "login for better statistics"
+    "endgames": "Final Scoring"
   },
   "about": {
     "title": "About This Site",

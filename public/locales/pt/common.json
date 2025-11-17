@@ -4,14 +4,6 @@
   "Association": "Associação",
   "Animal": "Animal",
   "Build": "Construção",
-  "quiz": {
-    "today": "Quiz Diário",
-    "result": "Estatísticas",
-    "random": "Quiz Aleatório",
-    "prev": "Quizzes Anteriores",
-    "total": "Total",
-    "banner_desc": "Participe do <1>Grupo no Discord</1> para discutir quizzes e qualquer assunto sobre Ark Nova!"
-  },
   "abilities": {
     "clever_description": "Ao terminar, você pode colocar qualquer carta de Ação em {Slot-1}.",
     "sun_bathing_description": "Você pode vender até {} carta(s) da sua mão por {Money-4} cada.",
@@ -530,13 +522,7 @@
     "about": "Sobre",
     "diy": "Criador de Cartas",
     "maps": "Mapas",
-    "endgames": "Pontuação Final",
-    "random_quiz": "Quiz Aleatório",
-    "daily_quiz": "Quiz Diário"
-  },
-  "comment": {
-    "login_to_comment": "faça login para comentar",
-    "login_to_pick": "faça login para estatísticas melhores"
+    "endgames": "Pontuação Final"
   },
   "about": {
     "title": "Sobre Este Site",

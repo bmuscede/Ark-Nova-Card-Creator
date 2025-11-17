@@ -4,14 +4,6 @@
   "Association": "协会",
   "Animal": "动物",
   "Build": "建造",
-  "quiz": {
-    "today": "每日题目",
-    "result": "统计数据",
-    "random": "随机题目",
-    "prev": "历年真题",
-    "total": "参与人数",
-    "banner_desc": "可以加入<1>Discord群组</1>来讨论每日选卡及各种游戏相关话题"
-  },
   "abilities": {
     "clever_description": "在当前行动完成后，你可以将任意一张行动卡牌放置到 {Slot-1} 。",
     "sun_bathing_description": "你可以从你的手牌中卖出最多{}张卡牌，每张卡牌 {Money-4} 。",
@@ -535,13 +527,7 @@
     "about": "关于",
     "diy": "卡牌制作",
     "maps": "地图",
-    "endgames": "终局计分",
-    "random_quiz": "随机题目",
-    "daily_quiz": "每日挑战"
-  },
-  "comment": {
-    "login_to_comment": "登录后评论",
-    "login_to_pick": "建议登录，方便数据统计"
+    "endgames": "终局计分"
   },
   "about": {
     "title": "关于本网站",
