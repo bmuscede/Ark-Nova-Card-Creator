@@ -514,9 +514,6 @@
     "maps": "Zoopläne",
     "endgames": "Endwertungskarten"
   },
-  "comment": {
-    "login_to_comment": "Einloggen zum Kommentieren"
-  },
   "about": {
     "title": "Über diese Seite",
     "intro": "Dies ist eine inoffizielle Open-Source-Website zum Brettspiel Arche Nova ohne Verbindung zu Capstone Games. Karten-, Symbol- und Zooplan-Daten sind lokal gebündelt, sodass du sie auch offline nutzen kannst. Falls es Bedenken wegen Copyright-Rechten gibt, werde ich mich darum kümmern.",
@@ -552,7 +549,9 @@
     "card_maker": "Kartenkonfigurator",
     "create_your_own_animal_card": "Erstelle deine eigene Tierkarte.",
     "Download": "Bild herunterladen",
+    "Download_pdf": "PDF herunterladen",
     "animal_name": "Tiername",
+    "scientific_name": "Wissenschaftlicher Name",
     "add_new_enclosure": "Spezialgehege hinzufügen",
     "add_new_ability": "Eigene Fähigkeit",
     "export_json": "Exportiere die Karte als JSON",

@@ -1,4 +1,5 @@
 import { toPng } from 'html-to-image';
+import { jsPDF } from 'jspdf';
 import { debounce } from 'lodash';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useTranslation } from 'next-i18next';
@@ -86,6 +87,44 @@ export default function Page(
       .catch((err) => {
         toast.error(err instanceof Error ? err?.message : 'Unknown error');
       });
+  };
+
+  const handleDownloadPdf = async () => {
+    if (downloadRef.current === null) {
+      return;
+    }
+
+    try {
+      const dataUrl = await toPng(downloadRef.current, {
+        quality: 0.8,
+        pixelRatio: 7,
+      });
+
+      const image = new Image();
+      image.src = dataUrl;
+
+      image.onload = () => {
+        const pxToMm = 0.2645833333;
+        const pageWidth = image.width * pxToMm;
+        const pageHeight = image.height * pxToMm;
+
+        const pdf = new jsPDF({
+          orientation: pageWidth > pageHeight ? 'landscape' : 'portrait',
+          unit: 'mm',
+          format: [pageWidth, pageHeight],
+        });
+
+        pdf.addImage(dataUrl, 'PNG', 0, 0, pageWidth, pageHeight);
+        pdf.addPage([pageWidth, pageHeight]);
+        pdf.save(`${diyAnimalCard.name || 'card'}.pdf`);
+      };
+
+      image.onerror = () => {
+        toast.error('Failed to load card image for PDF generation.');
+      };
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Unknown error');
+    }
   };
 
   const valuesToAnimalCard = (values: AnimalCardSchemaDto): AnimalCard => {
@@ -188,6 +227,12 @@ export default function Page(
                 onClick={handleDownloadImage}
               >
                 {t('diy.Download')}
+              </Button>
+              <Button
+                className='w-36 bg-blue-500 hover:bg-blue-400'
+                onClick={handleDownloadPdf}
+              >
+                {t('diy.Download_pdf')}
               </Button>
             </CardFooter>
           </Card>

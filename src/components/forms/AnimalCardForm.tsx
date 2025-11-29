@@ -177,6 +177,19 @@ export const AnimalCardForm = ({
         />
         <FormField
           control={form.control}
+          name='latinName'
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('diy.scientific_name')}</FormLabel>
+              <FormControl>
+                <Input placeholder='latin name' {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name='image'
           render={({ field }) => (
             <FormItem>
